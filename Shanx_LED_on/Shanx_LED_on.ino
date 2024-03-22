@@ -3,14 +3,18 @@ const int LED2 =12;
 const int LED3 = -11 ;
 const int GND = GND;
 //
-//int count = 0;
-void setup() {
-  // put your setup code here, to run once:
-  pinMode(LED1,OUTPUT);
-  pinMode(LED2,OUTPUT);
-  pinMode(LED3,OUTPUT);
+int count = 0;
+void setup(){
+ Serial.begin(9600);
 }
-//
+//void setup() {
+//  // put your setup code here, to run once:
+//  pinMode(LED1,OUTPUT);
+//  pinMode(LED2,OUTPUT);
+//  pinMode(LED3,OUTPUT);
+//}
+
+//led on
 //void loop() {
 //  digitalWrite(LED1, HIGH);
 //  delay(100);
@@ -25,6 +29,7 @@ void setup() {
 //
 //}
 
+//spam double blink
 //void loop() {
 //  if(count%5==0){
 //    if(LED1==HIGH){
@@ -51,17 +56,24 @@ void setup() {
 //  
 //}
 
-void loop() {
-  digitalWrite(LED1, HIGH);
-  delay(100);
-  digitalWrite(LED1, LOW);
-  delay(100);
-  digitalWrite(LED2, HIGH);
-  delay(100);
-  digitalWrite(LED2, LOW);
-  delay(100);
-  digitalWrite(LED3, HIGH);
-  delay(100);
-  digitalWrite(LED3, LOW);
-  delay(100);
+//traffic lights
+//void loop() {
+//  digitalWrite(LED1, HIGH);
+//  delay(100);
+//  digitalWrite(LED1, LOW);
+//  delay(100);
+//  digitalWrite(LED2, HIGH);
+//  delay(100);
+//  digitalWrite(LED2, LOW);
+//  delay(100);
+//  digitalWrite(LED3, HIGH);
+//  delay(100);
+//  digitalWrite(LED3, LOW);
+//  delay(100);
+//}
+
+void loop(){
+  Serial.print("Seconds: ");
+  Serial.println(cnt++);
+  delay(1000);
 }
